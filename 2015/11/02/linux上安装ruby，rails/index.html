@@ -37,13 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-
-  <meta name="description" content="Walk steps step by step" />
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux,rails,ruby," />
 
 
 
@@ -59,28 +53,28 @@
 
 
 
-<meta name="description" content="Walk steps step by step">
+<meta name="description" content="前言对于新入门的开发者，如何安装 Ruby, Ruby Gems 和 Rails 的运行环境肯定会是个问题，我当初安装花了一周时间，走了很多坑，网上教你如何安装rails的教程有很多，我是走了不少坑，简单的总结一下吧。希望对你有帮助~">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yangzheng's blog">
-<meta property="og:url" content="http://yihoudeyihou.cn/2015/10/28/关于我/index.html">
+<meta property="og:title" content="linux上安装ruby，rails">
+<meta property="og:url" content="http://yihoudeyihou.cn/2015/11/02/linux上安装ruby，rails/index.html">
 <meta property="og:site_name" content="yangzheng's blog">
-<meta property="og:description" content="Walk steps step by step">
-<meta property="og:updated_time" content="2015-10-28T17:01:48.518Z">
+<meta property="og:description" content="前言对于新入门的开发者，如何安装 Ruby, Ruby Gems 和 Rails 的运行环境肯定会是个问题，我当初安装花了一周时间，走了很多坑，网上教你如何安装rails的教程有很多，我是走了不少坑，简单的总结一下吧。希望对你有帮助~">
+<meta property="og:updated_time" content="2015-11-04T16:04:18.956Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yangzheng's blog">
-<meta name="twitter:description" content="Walk steps step by step">
+<meta name="twitter:title" content="linux上安装ruby，rails">
+<meta name="twitter:description" content="前言对于新入门的开发者，如何安装 Ruby, Ruby Gems 和 Rails 的运行环境肯定会是个问题，我当初安装花了一周时间，走了很多坑，网上教你如何安装rails的教程有很多，我是走了不少坑，简单的总结一下吧。希望对你有帮助~">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
+    scheme: 'Mist',
     sidebar: 'post',
     motion: true
   };
 </script>
 
-  <title>  | yangzheng's blog </title>
+  <title> linux上安装ruby，rails | yangzheng's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -195,6 +189,10 @@
   
   
 
+  
+  
+  
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
@@ -206,7 +204,7 @@
             
             
               
-                
+                linux上安装ruby，rails
               
             
           </h1>
@@ -215,14 +213,36 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-10-28T10:01:48-07:00" content="Oct 28 2015">
-              Oct 28 2015
+            <time itemprop="dateCreated" datetime="2015-11-02T01:42:28-08:00" content="Nov 2 2015">
+              Nov 2 2015
             </time>
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp; 分类于
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/ruby/" itemprop="url" rel="index">
+                    <span itemprop="name">ruby</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/02/linux上安装ruby，rails/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/02/linux上安装ruby，rails/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -239,13 +259,61 @@
       
 
       
-        <span itemprop="articleBody"></span>
+        <span itemprop="articleBody"><h2 id="前言">前言</h2><p>对于新入门的开发者，如何安装 Ruby, Ruby Gems 和 Rails 的运行环境肯定会是个问题，<br>我当初安装花了一周时间，走了很多坑，网上教你如何安装rails的教程有很多，我是走了不少<br>坑，简单的总结一下吧。希望对你有帮助~</p>
+<a id="more"></a>
+<p>首先说明，这个安装方法不适合在windous平台上，因为win对ruby很不友好，在win上开发，你会遇到很多不必要解决的麻烦，<br>我是在unbutu14.04上安装的，对于其他linux也是大同小异吧，</p>
+<p>第一步，打开终端Terminal，快捷键是Ctrl+Alt+T<br>升级一下源，执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure></p>
+<p>安装git<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git</span><br></pre></td></tr></table></figure></p>
+<p>安装RVM了<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ curl -L https://get.rvm.io | bash -s stable</span><br><span class="line">或</span><br><span class="line">\curl -L https://get.rvm.io | bash -s stable --rails</span><br><span class="line">或</span><br><span class="line">\curl -L https://get.rvm.io | bash -s stable --ruby</span><br></pre></td></tr></table></figure></p>
+<p>先关闭终端，为了加载rvm,执行(一行)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ source ~/.rvm/scripts/rvm</span><br></pre></td></tr></table></figure></p>
+<p>检查一下RVM是否安装正确</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ rvm -v</span><br><span class="line">rvm <span class="number">1.26</span><span class="number">.11</span> (latest) by Wayne E. Seguin &lt;wayneeseguin@gmail.com&gt;, Michal Papis &lt;mpapis@gmail.com&gt; [https://rvm.io/]</span><br></pre></td></tr></table></figure>
+<p>安装一下rvm的依赖包<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rvm requirements</span><br></pre></td></tr></table></figure></p>
+<p>可用apt-get或aptitude安装，例如执行（这也是一行）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install -y build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion</span><br></pre></td></tr></table></figure></p>
+<p>接下来就到正题了，安装ruby，由于国内访问国外网站会很慢，这步可能需要些时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rvm install 1.9.3</span><br></pre></td></tr></table></figure></p>
+<p>安装完成后检查一下ruby是否安装成功<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ruby-v</span><br><span class="line">ruby <span class="number">1.9</span><span class="number">.3</span>p484 (<span class="number">2013</span>-<span class="number">11</span>-<span class="number">22</span> revision <span class="number">43786</span>) [x86_64-linux]</span><br></pre></td></tr></table></figure></p>
+<p>升级一下gem<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gem update --system</span><br></pre></td></tr></table></figure></p>
+<p>安装rails<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gem install rails</span><br></pre></td></tr></table></figure></p>
+<p>通常rails不会这么容易就安装上的，<br>安装rails,时间可能很久，看你网速了。如果提示找不到源或者错误的，<br>你可能需要挂上VPN(科学上网)，翻墙会在我以后的博客上介绍，<br>现在我介绍使用淘宝源接下来就需要借用淘宝镜像，马云家贡献出来的免费给大陆的热爱ruby的码农，</p>
+<p>查看一下你当前的源<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ gem sources -l</span><br><span class="line">*** CURRENT SOURCES ***</span><br><span class="line"></span><br><span class="line">https://rubygems.org</span><br></pre></td></tr></table></figure></p>
+<p>移除ruby镜像（时间过了好久，我也记不清 移除ruby镜像和更换淘宝源的source有没有+s）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gem source &#8211;remove https://rubygems.org</span><br></pre></td></tr></table></figure>
+<p>添加淘宝镜像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gem sources -a http://ruby.taobao.org</span><br></pre></td></tr></table></figure></p>
+<p>查看一下你当前的源<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ gem sources -l</span><br><span class="line">*** CURRENT SOURCES ***</span><br><span class="line"></span><br><span class="line">https://ruby.taobao.org</span><br></pre></td></tr></table></figure></p>
+<p>现在就可以安装rails<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gem install rails</span><br></pre></td></tr></table></figure></p>
+<p>对于遇到没有权限，+个sudo<br>检查一下rails<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ rails -v</span><br></pre></td></tr></table></figure></p>
+<p>rails 还需要我们安装一与些第三方数据库，才能使用，安装完后就可以感受优美，富有魔幻风的ruby语言<br>感受强大的rails</p>
+</span>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+            <a href="/tags/rails/" rel="tag">#rails</a>
+          
+            <a href="/tags/ruby/" rel="tag">#ruby</a>
+          
+        </div>
+      
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/24/关于python统计文件的字符/" rel="next" title="关于python统计文件的字符">
+                <i class="fa fa-chevron-left"></i> 关于python统计文件的字符
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -268,6 +336,10 @@
 
         
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/11/02/linux上安装ruby，rails/"
+           data-title="linux上安装ruby，rails" data-url="http://yihoudeyihou.cn/2015/11/02/linux上安装ruby，rails/">
+      </div>
     
   </div>
 
@@ -303,28 +375,28 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="yangzheng" itemprop="image"/>
+          <img class="site-author-image" src="http://musicdata.baidu.com/data2/pic/115411787/115411787.jpg" alt="yangzheng" itemprop="image"/>
           <p class="site-author-name" itemprop="name">yangzheng</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">Walk steps step by step</p>
+        <p class="site-description motion-element" itemprop="description">你的指尖，有改变世界的力量</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
@@ -348,16 +420,20 @@
 
       
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
           <div class="post-toc">
             
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></div>
             
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
         </section>
       
 
@@ -387,7 +463,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
+    NexT.Mist
   </a>
 </div>
 
@@ -406,11 +482,28 @@
 
   
     
-    
 
   
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"yangzheng123"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+    
+     
 
 
+    
   
 
   
@@ -511,7 +604,7 @@
 
     function tocOverflowIndicator (indicator, action) {
       var $indicator = $(indicator);
-      var opacity = action === 'show' ? 0.4 : 0;
+      var opacity = action === 'show' ? 1 : 0;
       $indicator.velocity ?
         $indicator.velocity('stop').velocity({
           opacity: opacity
