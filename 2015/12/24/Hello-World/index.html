@@ -53,19 +53,16 @@
 
 
 
-<meta name="description" content="##
-爬虫：是通过网页的链接地址来寻找网页的，从网站某一个页面（通常是首页）开始，读取网页的内容，找到在网页中的其它链接地址，然后通过这些链接地址寻找下一个网页，这样一直循环下去，直到把这个网站所有的网页都抓取完为止。">
+<meta name="description" content="爬虫：是通过网页的链接地址来寻找网页的，从网站某一个页面（通常是首页）开始，读取网页的内容，找到在网页中的其它链接地址，然后通过这些链接地址寻找下一个网页，这样一直循环下去，直到把这个网站所有的网页都抓取完为止。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬虫">
 <meta property="og:url" content="http://yihoui.com/2015/12/24/Hello-World/index.html">
 <meta property="og:site_name" content="yangzheng's blog">
-<meta property="og:description" content="##
-爬虫：是通过网页的链接地址来寻找网页的，从网站某一个页面（通常是首页）开始，读取网页的内容，找到在网页中的其它链接地址，然后通过这些链接地址寻找下一个网页，这样一直循环下去，直到把这个网站所有的网页都抓取完为止。">
-<meta property="og:updated_time" content="2016-01-14T13:52:56.269Z">
+<meta property="og:description" content="爬虫：是通过网页的链接地址来寻找网页的，从网站某一个页面（通常是首页）开始，读取网页的内容，找到在网页中的其它链接地址，然后通过这些链接地址寻找下一个网页，这样一直循环下去，直到把这个网站所有的网页都抓取完为止。">
+<meta property="og:updated_time" content="2016-01-14T13:55:16.081Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python爬虫">
-<meta name="twitter:description" content="##
-爬虫：是通过网页的链接地址来寻找网页的，从网站某一个页面（通常是首页）开始，读取网页的内容，找到在网页中的其它链接地址，然后通过这些链接地址寻找下一个网页，这样一直循环下去，直到把这个网站所有的网页都抓取完为止。">
+<meta name="twitter:description" content="爬虫：是通过网页的链接地址来寻找网页的，从网站某一个页面（通常是首页）开始，读取网页的内容，找到在网页中的其它链接地址，然后通过这些链接地址寻找下一个网页，这样一直循环下去，直到把这个网站所有的网页都抓取完为止。">
 
 
 
@@ -262,14 +259,19 @@
       
 
       
-        <span itemprop="articleBody"><hr>
-<p>##</p>
-<p>爬虫：是通过网页的链接地址来寻找网页的，从网站某一个页面（通常是首页）开始，读取网页的内容，<br>找到在网页中的其它链接地址，然后通过这些链接地址寻找下一个网页，这样一直循环下去，直到把<br>这个网站所有的网页都抓取完为止。<br><a id="more"></a></p>
+        <span itemprop="articleBody"><p>爬虫：是通过网页的链接地址来寻找网页的，从网站某一个页面（通常是首页）开始，读取网页的内容，<br>找到在网页中的其它链接地址，然后通过这些链接地址寻找下一个网页，这样一直循环下去，直到把<br>这个网站所有的网页都抓取完为止。<br><a id="more"></a></p>
 <p>URL就是在浏览器端输入的    <a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a>    这个字符串<br>URI通常由三部分组成：<br>①访问资源的命名机制；<br>②存放资源的主机名；<br>③资源自身 的名称，由路径表示。<br>URL是URI的一个子集，译为“统一资源定位 符”，URL是Internet上描述信息资源的字符串</p>
 <p>urllib #简单易用的抓取模块<br>urllib.urlopen() 方法 #获得类文件对象<br>read() #读取文件内容<br>info() #获取网页header信息<br>getcode() # 获取网页状态码<br>geturl() #获取传入的网址url</p>
 <p>网页状态码。200是正常访问，301是重定向，404是网页不存在，403是禁止访问，500是服务器无响应<br>200：请求成功      处理方式：获得响应的内容，进行处理 </p>
 <p>简单贴出来一小段抓取web前端的html，用到urllib模块</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env python&#10;#-*-coding:utf8;-*-&#10;&#10;import urllib&#10;&#10;url = &#34;http://163.com/&#34;&#10;&#10;html =  urllib.urlopen(url)&#10;&#10;print html.read().decode(&#34;gbk&#34;).encode(&#34;utf-8&#34;)</span><br></pre></td></tr></table></figure></span>
+<p>‘’’</p>
+<p>#!/usr/bin/env python</p>
+<p>#-<em>-coding:utf8;-</em>-</p>
+<p>import urllib</p>
+<p>url = “<a href="http://163.com/" target="_blank" rel="external">http://163.com/</a>“</p>
+<p>html =  urllib.urlopen(url)</p>
+<p>print html.read().decode(“gbk”).encode(“utf-8”)<br>‘’’</p>
+</span>
       
     </div>
 
