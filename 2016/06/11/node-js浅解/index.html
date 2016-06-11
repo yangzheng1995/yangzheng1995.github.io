@@ -37,7 +37,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python," />
+  <meta name="keywords" content="javascript,node.js," />
 
 
 
@@ -53,16 +53,16 @@
 
 
 
-<meta name="description" content="前言 用python统计文件中的字符出现次数，打印出来，运用到python读取函数，写一个函数计算出现次数，循环，注明一下，chdir后是我的python文件根目录，读取的文件名是name.txt">
+<meta name="description" content="前言node.js简单的来说就是javascript运行在服务器端，简单的介绍下node发展历史，node工作原理，以及node如何进行学习做一个简单的介绍">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于python统计文件的字符">
-<meta property="og:url" content="http://yihoui.com/2015/10/24/关于python统计文件的字符/index.html">
+<meta property="og:title" content="node.js浅解">
+<meta property="og:url" content="http://yihoui.com/2016/06/11/node-js浅解/index.html">
 <meta property="og:site_name" content="If you Never fear">
-<meta property="og:description" content="前言 用python统计文件中的字符出现次数，打印出来，运用到python读取函数，写一个函数计算出现次数，循环，注明一下，chdir后是我的python文件根目录，读取的文件名是name.txt">
-<meta property="og:updated_time" content="2016-01-07T17:38:13.000Z">
+<meta property="og:description" content="前言node.js简单的来说就是javascript运行在服务器端，简单的介绍下node发展历史，node工作原理，以及node如何进行学习做一个简单的介绍">
+<meta property="og:updated_time" content="2016-06-11T17:54:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于python统计文件的字符">
-<meta name="twitter:description" content="前言 用python统计文件中的字符出现次数，打印出来，运用到python读取函数，写一个函数计算出现次数，循环，注明一下，chdir后是我的python文件根目录，读取的文件名是name.txt">
+<meta name="twitter:title" content="node.js浅解">
+<meta name="twitter:description" content="前言node.js简单的来说就是javascript运行在服务器端，简单的介绍下node发展历史，node工作原理，以及node如何进行学习做一个简单的介绍">
 
 
 
@@ -74,7 +74,7 @@
   };
 </script>
 
-  <title> 关于python统计文件的字符 | If you Never fear </title>
+  <title> node.js浅解 | If you Never fear </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -204,7 +204,7 @@
             
             
               
-                关于python统计文件的字符
+                node.js浅解
               
             
           </h1>
@@ -213,8 +213,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2015-10-24T19:55:13-07:00" content="2015 Oct 24">
-              2015 Oct 24
+            <time itemprop="dateCreated" datetime="2016-06-11T09:28:46-07:00" content="2016 Jun 11">
+              2016 Jun 11
             </time>
           </span>
 
@@ -223,8 +223,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">node.js</span>
                   </a>
                 </span>
 
@@ -239,8 +239,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/10/24/关于python统计文件的字符/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/24/关于python统计文件的字符/" itemprop="commentsCount"></span>
+                <a href="/2016/06/11/node-js浅解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/11/node-js浅解/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -259,27 +259,31 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="前言_用python统计文件中的字符出现次数，打印出来，">前言 用python统计文件中的字符出现次数，打印出来，</h2><p>运用到python读取函数，写一个函数计算出现次数，循环，<br>注明一下，chdir后是我的python文件根目录，读取的文件名是name.txt</p>
+        <span itemprop="articleBody"><h2 id="前言">前言</h2><p>node.js简单的来说就是javascript运行在服务器端，简单的介绍下node发展历史，node工作原理，以及node如何进行学习做<br>一个简单的介绍</p>
 <a id="more"></a>
-<pre><code class="python"><span class="comment">#!/usr/bin/env python</span>
-<span class="comment">#-*-coding:utf8;-*-</span>
-<span class="keyword">from</span> os <span class="keyword">import</span> chdir,system
-chdir(<span class="string">"/home/yangzheng/Desktop/python"</span>)
-
-text = open(<span class="string">'/home/yangzheng/Desktop/name.txt'</span>).read() 
-text = str(text).lower()
-
-<span class="keyword">import</span> re        
-chars = re.findall(<span class="string">r'\w'</span>, text)
-
-char_dict = dict([(a, <span class="number">0</span>) <span class="keyword">for</span> a <span class="keyword">in</span> chars]) 
-
-
-<span class="keyword">for</span> char <span class="keyword">in</span> chars:
-    char_dict[char] = char_dict[char] + <span class="number">1</span> 
-
-<span class="keyword">print</span> char_dict
-</code></pre>
+<h2 id="node发展历史">node发展历史</h2><p>node.js是由Ryan Dahl编写的服务器端js，framework，其初衷是为了编写更为高效的web服务器。<br>node.js使用当前最快的chrome V8引擎</p>
+<pre><code>单线程：因为不需要考虑并发，所以也就没有了锁和阻塞的概念，大大简化编程。 
+事件回调模型：所有的异步操作，比如数据库访问都是通过事件触发的。 
+完全发挥javascript作为动态解释语言的强大威力：开发人员可以自由的使用一切特性比如closure，并且不需要担心跨浏览器支持（因为是服务端）。
+</code></pre><p>node.js最近几年新兴的热潮，因为其非常适合在分布式管理设备上运行，受到很多国外的人追捧，迅速刮起node热潮，过年大神有阿里前端资深工程师  “朴灵”，国外有 “TJ大神” <a href="https://twitter.com/tjholowaychuk" target="_blank" rel="external">twitter</a> </p>
+<h2 id="工作原理:">工作原理:</h2><p>Javascript是一个事件驱动语言，Node利用了这个优点，编写出可扩展性高的服务器。Node采用了一个称为“事件循环(event loop）”的架构，使得编写可扩展性高的服务器变得既容易又安全。提高服务器性能的技巧有多种多样。Node选择了一种既能提高性能，又能减低开发复杂度的架构。这是一个非常重要的特性。并发编程通常很复杂且布满地雷。Node绕过了这些，但仍提供很好的性能。 </p>
+<p>Node采用一系列“非阻塞”库来支持事件循环的方式。本质上就是为文件系统、数据库之类的资源提供接口。当 你向文件系统发送一个请求时，无需等待硬盘（寻址并检索文件），硬盘准备好的时候非阻塞接口会通知Node。该模型以可扩展的方式简化了对慢资源的访问， 直观，易懂。尤其是对于熟悉onmouseover、onclick等DOM事件的用户，更有一种似曾相识的感觉。</p>
+<p>来个 helloworld<br>``<br>var express = require(‘express’);<br>// 调用 express 实例，它是一个函数，不带参数调用时，会返回一个 express 实例，将这个变量赋予 app 变量。<br>var app = express();</p>
+<p>// app 本身有很多方法，其中包括最常用的 get、post、put/patch、delete，在这里我们调用其中的 get 方法，为我们的 <code>/</code> 路径指定一个 handler 函数。<br>// 这个 handler 函数会接收 req 和 res 两个对象，他们分别是请求的 request 和 response。<br>// request 中包含了浏览器传来的各种信息，比如 query 啊，body 啊，headers 啊之类的，都可以通过 req 对象访问到。<br>// res 对象，我们一般不从里面取信息，而是通过它来定制我们向浏览器输出的信息，比如 header 信息，比如想要向浏览器输出的内容。这里我们调用了它的 #send 方法，向浏览器输出一个字符串。<br>app.get(‘/‘, function (req, res) {<br>  res.send(‘Hello World’);<br>});</p>
+<p>// 定义好我们 app 的行为之后，让它监听本地的 3000 端口。这里的第二个函数是个回调函数，会在 listen 动作成功后执行，我们这里执行了一个命令行输出操作，告诉我们监听动作已完成。<br>app.listen(3000, function () {<br>  console.log(‘app is listening at port 3000’);<br>});<br>``</p>
+<h2 id="如何进行node的学习">如何进行node的学习</h2><p>很多人刚接触node的时候会不习惯它特有的异步回调式编程，不熟悉javascript语法。从而对node学习起来感觉很吃力，我之前在<a href="https://www.zhihu.com/question/21567720" target="_blank" rel="external">知乎</a>上看到了一篇关于如何系统的学习node.js    个人感觉，这里介绍的实在是挺好的。  还有对javascript这方面薄弱的人做一个系统的针对学习，我感觉国内最好的一本书就是朴灵写的《node.js深入浅出》今天我在这比比的这本书肯定都会讲到</p>
+<p>1.《nodejs入门》简单的了解一下node.js</p>
+<ol>
+<li><p>《nodejs开发指南》项目做一下，知道基础，及基本的配合express，jquery，bootstrap，数据库MongoDB</p>
+</li>
+<li><p>看express官网api <a href="http://expressjs.jser.us/api" target="_blank" rel="external">Express - api参考</a></p>
+</li>
+</ol>
+<p>4.之后发现，一个系列课程，从零开始nodejs系列文章：从零开始nodejs系列文章<br>其中 文章： Node.js开发框架Express4.x：Node.js开发框架Express4.x ，详细介绍了express4项目的基本内容，很好<br>文章：用Nodejs连接MySQL：用Nodejs连接MySQL，介绍mysql与node基本，及数据库连接池，宕机，连接超时等node问题解决办法，node-mysql官网也有相应英文解决办法</p>
+<p>5《node.js深入浅出》系统的认知node.js</p>
+<p>node+express<br>1.整体介绍框架Express框架 – JavaScript 参考[github]（<a href="https://github.com/nswbmw/N-blog）" target="_blank" rel="external">https://github.com/nswbmw/N-blog）</a><br>2.express取值：使用 NodeJS + Express 從 GET/POST Request 取值<br>3.session+cookie：node.js web开发:EXPRESS 4.x 以上使用session和cookie 的记录<br>express 框架之session express-session官网 npmjs.com 的页面<br>Node.js Express 从入门到菜鸟（二）——Cookie+Session+三层搭建<br>express 4.2.0 使用session和cookies<br>在Express 使用session 做登录控制<br>去掉flash之后，可以只用session，在每次post一开始 置req.session.error为null，之后，验证过程中，检查错误再设置req.session.error，然后根据结果redirect之后，检测是否error为null，来决定是否展示<br>node session保存的只是中间键值对，不管赋予res.locals.user等，都不是对象，需要在中间件中重新生成对象，才能调用方法，当然如果只是使用属性值，则不需要<br>4.node 社区人写的教程放在<a href="https://github.com/alsotang/node-lessons" target="_blank" rel="external">github上</a> </p>
+<p>##后续</p>
+<p>node.js 国内社区 <a href="http://cnodejs.org/" target="_blank" rel="external">Cnode</a>   有问题的话，可以在社区里发帖询问，<br>感觉这个社区人都是在讨论技术贴，而我天天逛的v2ex这个社区是天天就是喷闲事的多，技术贴的节点贴就明显质量低一些，</p>
 </span>
       
     </div>
@@ -288,7 +292,9 @@ char_dict = dict([(a, <span class="number">0</span>) <span class="keyword">for</
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag">#python</a>
+            <a href="/tags/javascript/" rel="tag">#javascript</a>
+          
+            <a href="/tags/node-js/" rel="tag">#node.js</a>
           
         </div>
       
@@ -297,17 +303,13 @@ char_dict = dict([(a, <span class="number">0</span>) <span class="keyword">for</
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/02/关于我/" rel="next" title="关于我">
-                <i class="fa fa-chevron-left"></i> 关于我
+              <a href="/2016/05/19/c-造的贪吃虫/" rel="next" title="c++造的贪吃虫">
+                <i class="fa fa-chevron-left"></i> c++造的贪吃虫
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/02/linux上安装ruby，rails/" rel="prev" title="linux上安装ruby，rails">
-                linux上安装ruby，rails <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -334,8 +336,8 @@ char_dict = dict([(a, <span class="number">0</span>) <span class="keyword">for</
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/10/24/关于python统计文件的字符/"
-           data-title="关于python统计文件的字符" data-url="http://yihoui.com/2015/10/24/关于python统计文件的字符/">
+      <div class="ds-thread" data-thread-key="2016/06/11/node-js浅解/"
+           data-title="node.js浅解" data-url="http://yihoui.com/2016/06/11/node-js浅解/">
       </div>
     
   </div>
@@ -425,7 +427,7 @@ char_dict = dict([(a, <span class="number">0</span>) <span class="keyword">for</
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言_用python统计文件中的字符出现次数，打印出来，"><span class="nav-number">1.</span> <span class="nav-text">前言 用python统计文件中的字符出现次数，打印出来，</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#node发展历史"><span class="nav-number">2.</span> <span class="nav-text">node发展历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作原理:"><span class="nav-number">3.</span> <span class="nav-text">工作原理:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何进行node的学习"><span class="nav-number">4.</span> <span class="nav-text">如何进行node的学习</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
